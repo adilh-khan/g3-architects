@@ -1,12 +1,24 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 /* Shared CSS */
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section {
+    margin-top: 130px;
+}
 .work-sans {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 .display-flex {
     display: flex;
 }
@@ -19,6 +31,9 @@
 }
 .dark-3 {
     color: #727272;
+}
+.features-design {
+    color: #FF900E;
 }
 /* Shared Button */
 .btn-primary {
@@ -35,6 +50,8 @@
 .navbar {
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .nav-item {
     list-style: none;
@@ -51,7 +68,7 @@
 }
 .brand-name {
     font-weight: bold;
-    font-size: 2.8rem;
+    font-size: 3rem;
 }
 /* Banner Related Style */
 .banner-content {
@@ -64,12 +81,91 @@
     font-weight: bold;
     font-size: 4rem;
 }
-.banner-image {
+.banner-img {
     width: 100%;
 }
+/* Team Section */
+.team {
+    align-items: center;
+}
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features {
+    margin-left: 130px;
+    max-width: 530px;
+}
+#quick-list {
+    font-weight: 500;
+}
+/* Some Fact Section Style */
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-card {
+    width: 240px;
+    height: 240px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;   
+}
+.fact-description {
+    max-width: 530px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive Media Query */
-@media screen and (max-width:576px) {
-    .navbar, .nav-links {
+@media screen and (max-width: 576px) {
+    .navbar, 
+    .nav-links,
+    .team {
         flex-direction: column;
+    }
+    .team-img-container,
+    .facts-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features {
+        margin-left: 20px;
+    }
+    .nav-item {
+        margin-bottom: 15px;
+    }
+    .facts-container {
+        justify-items: center;
+        gap: 24px;
+    }
+}
+@media  screen and (min-width: 576px) and (max-width: 992px) {
+    .team {
+        flex-direction: column;
+    }
+    .our-features {
+        margin-left: 50px;
     }
 }
