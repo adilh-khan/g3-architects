@@ -1,7 +1,9 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 /* Shared CSS */
-
+body {
+    overflow-x: hidden;
+}
 main {
     max-width: 1440px;
     margin: 0 auto;
@@ -144,7 +146,9 @@ main > section {
 /* Feature Section Style */
 
 .features {
-    gap: 100px;
+    gap: 140px;
+    align-items: center;
+    justify-items: center;
 } 
 .f-title-border {
     border-left: 5px solid #FF900E;
@@ -156,27 +160,33 @@ main > section {
     margin-bottom: 20px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
 }
-.feature-title {
+.f-card-title {
     font-weight: 600;
     font-size: 1.25rem;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
-
-
-
-
-
-
-
-
+#experience-badge {
+    padding: 45px 42px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.feature-img {
+    width: 100%;
+}
 
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-links,
-    .team {
+    .team,
+    .features {
         flex-direction: column;
     }
     .team-img-container,
@@ -198,9 +208,14 @@ main > section {
         justify-items: center;
         gap: 50px;
     }
+    #experience-badge {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
 }
 @media  screen and (min-width: 576px) and (max-width: 992px) {
-    .team {
+    .team,
+    .features {
         flex-direction: column;
     }
     .our-features {
@@ -211,5 +226,9 @@ main > section {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
+    }
+    #experience-badge {
+        margin-top: 20px;
+        margin-left: 0px;
     }
 }
